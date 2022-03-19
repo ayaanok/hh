@@ -5,9 +5,7 @@ client.on("ready", () => {
     console.log(`[!]: Logged in as ${client.user.tag}`)
 });
 
-if (!message.member.hasPermission("MANAGE_GUILD")) return message.channel.send("**You Dont Have Permmissions To official Someone! - [MANAGE_GUILD]**");
-if (!message.guild.me.hasPermission("MANAGE_GUILD")) return message.channel.send("**I Don't Have Permissions To official Someone! - [MANAGE_GUILD]**")
-if (!args[0]) return message.channel.send("**Please Enter A User To official**");
+if(!message.member.hasPermission(["MANAGE_ROLES"]) && !ownerID.includes(message.author.id)) return message.channel.send("You dont have permission to perform this command!")
 
 client.on("mesageCreate", (message) => {
     if (message.content.startsWith("official")) {
@@ -21,4 +19,4 @@ client.on("mesageCreate", (message) => {
     }
 });
 
-client.login('TxOTQzMjk2OTIwNTI2ODcw.YgdTDg.jKUPvICHWgFE6Xr13c9vsF6MLoE');      
+client.login('OTQxOTQzMjk2OTIwNTI2ODcw.YgdTDg.jKUPvICHWgFE6Xr13c9vsF6MLoE');      
