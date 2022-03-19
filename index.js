@@ -6,12 +6,12 @@ client.on("ready", () => {
 });
 
 client.on("mesageCreate", (message) => {
-    if (message.content.startsWith(".official")) {
+    if (message.content.startsWith("official")) {
         const user = message.mentions.members.first();
         if (!user) {
              message.channel.send({ content: "mention someone first" });
         } else {
-           member.roles.add("ROLE ID HERE")
+           member.roles.add("952185539476488232")
            message.channel.send({ content: "added a role to them" });
         }
     }
